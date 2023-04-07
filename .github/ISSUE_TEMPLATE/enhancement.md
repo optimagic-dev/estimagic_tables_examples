@@ -1,16 +1,14 @@
 ---
-
 name: Enhancement
-about: Suggest an idea for reproducible_research_template
+about: Suggest an idea for estimagic_tables_examples
 title: "ENH:"
 labels: "enhancement"
-
 ---
 
 #### Is your feature request related to a problem?
 
 Provide a description of what the problem is, e.g. "I wish I could use
-reproducible_research_template to do [...]".
+estimagic_tables_examples to do [...]".
 
 #### Describe the solution you'd like
 

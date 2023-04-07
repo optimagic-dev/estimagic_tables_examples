@@ -3,9 +3,9 @@ import shutil
 
 import pytask
 from pytask_latex import compilation_steps as cs
-from reproducible_research_template.config import BLD, PAPER_DIR
+from estimagic_tables_examples.config import BLD, PAPER_DIR
 
-documents = ["reproducible_research_template", "reproducible_research_template_pres"]
+documents = ["estimagic_tables_examples"]
 
 for document in documents:
 

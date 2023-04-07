@@ -1,17 +1,15 @@
 ---
-
 name: Bug Report
-about: Create a bug report to help us improve reproducible_research_template
+about: Create a bug report to help us improve estimagic_tables_examples
 title: "BUG:"
 labels: "bug"
-
 ---
 
 - [ ] I have checked that this issue has not already been reported.
 
-- [ ] I have confirmed this bug exists on the latest version of reproducible_research_template.
+- [ ] I have confirmed this bug exists on the latest version of estimagic_tables_examples.
 
-- [ ] (optional) I have confirmed this bug exists on the `main` branch of reproducible_research_template.
+- [ ] (optional) I have confirmed this bug exists on the `main` branch of estimagic_tables_examples.
 
 ---
 

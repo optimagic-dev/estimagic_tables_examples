@@ -1,10 +1,8 @@
 ---
-
 name: Documentation Improvement
-about: Report wrong or missing documentation in reproducible_research_template
+about: Report wrong or missing documentation in estimagic_tables_examples
 title: "DOC:"
 labels: "documentation"
-
 ---
 
 #### Location of the documentation
@@ -12,7 +10,7 @@ labels: "documentation"
 Provide the location of the documentation, e.g. an URL of the documentation.
 
 **Note**: You can check the latest versions of the docs on `main`
-[here](https://reproducible_research_template.readthedocs.io/en/latest).
+[here](https://estimagic_tables_examples.readthedocs.io/en/latest).
 
 #### Documentation problem
 

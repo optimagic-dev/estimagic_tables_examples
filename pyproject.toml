@@ -2,10 +2,10 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 
 [tool.setuptools_scm]
-write_to = "src/reproducible_research_template/_version.py"
+write_to = "src/estimagic_tables_examples/_version.py"
 
 [tool.pytask.ini_options]
-paths = ["./src/reproducible_research_template", "./src/paper"]
+paths = ["./src/estimagic_tables_examples", "./paper"]
 infer_latex_dependencies = true
 
 [tool.ruff]
