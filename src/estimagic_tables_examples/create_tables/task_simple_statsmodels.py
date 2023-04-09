@@ -1,11 +1,11 @@
 """Tasks running the results formatting (tables, figures)."""
 
+import estimagic as em
 import pandas as pd
 import pytask
-import estimagic as em
+import statsmodels.formula.api as sm
 
 from estimagic_tables_examples.config import BLD, IN_DATA
-import statsmodels.formula.api as sm
 
 PARAMETRIZATION = {}
 for return_type, file_ending in [("latex", "tex"), ("html", "html")]:
@@ -26,11 +26,19 @@ for task_id, kwargs in PARAMETRIZATION.items():
         produces=kwargs["produces"],
         return_type=kwargs["return_type"],
     ):
-        """Simple statsmodels table. The example is taken from the documentation."""
+        """Simple statsmodels table.
+
+        The example is taken from the documentation.
+
+        """
         df = pd.read_csv(depends_on, index_col=0)
         mod1 = sm.ols("target ~ Age + Sex", data=df).fit()
         mod2 = sm.ols("target ~ Age + Sex + BMI + ABP", data=df).fit()
         models = [mod1, mod2]
-        table = em.estimation_table(models, return_type=return_type)
+        table = em.estimation_table(
+            models,
+            return_type=return_type,
+            siunitx_warning=False,
+        )
         with open(produces, "w") as f:
             f.writelines(table)
