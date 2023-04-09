@@ -21,7 +21,7 @@ for return_type, file_ending in [("latex", "tex"), ("html", "html")]:
 for task_id, kwargs in PARAMETRIZATION.items():
 
     @pytask.mark.task(id=task_id)
-    def task_two_step_statsmodels_table_latex(
+    def task_two_step_table(
         depends_on=kwargs["depends_on"],
         produces=kwargs["produces"],
         return_type=kwargs["return_type"],
@@ -31,8 +31,14 @@ for task_id, kwargs in PARAMETRIZATION.items():
         mod1 = sm.ols("target ~ Age + Sex", data=df).fit()
         mod2 = sm.ols("target ~ Age + Sex + BMI + ABP", data=df).fit()
         models = [mod1, mod2]
-        render_inputs = em.estimation_table(models, return_type="render_inputs")
-
+        render_inputs = em.estimation_table(
+            models,
+            return_type="render_inputs",
+            custom_param_names={"Intercept": "Constant", "Age": "Age of respondent"},
+            # ToDo: A bit confusing why I need to use custom_col_groups instead of
+            # ToDo: custom_col_names here.
+            custom_col_groups={"target": "Output"},
+        )
         # Remove rows from footer.
         render_inputs["footer"] = render_inputs["footer"].loc[["R$^2$", "Observations"]]
 

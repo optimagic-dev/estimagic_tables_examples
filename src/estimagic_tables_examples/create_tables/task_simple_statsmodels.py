@@ -21,7 +21,7 @@ for return_type, file_ending in [("latex", "tex"), ("html", "html")]:
 for task_id, kwargs in PARAMETRIZATION.items():
 
     @pytask.mark.task(id=task_id)
-    def task_simple_statsmodels_table_latex(
+    def task_simple_table(
         depends_on=kwargs["depends_on"],
         produces=kwargs["produces"],
         return_type=kwargs["return_type"],

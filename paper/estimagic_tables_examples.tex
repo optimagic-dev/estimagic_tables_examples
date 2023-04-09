@@ -56,14 +56,18 @@
 \setlength{\parindent}{0ex}
 \setstretch{1.5}
 
+% Siuntix for estimagic tables
 \usepackage{siunitx}
-
 \sisetup{
     group-digits             = false,
     input-symbols            = (),
     table-align-text-pre     = false,
     table-align-text-post    = false
 }
+
+% For line breaks within cells of tables
+\usepackage{makecell}
+
 \begin{document}
 
 \title{Examples estimagic tables}
@@ -86,12 +90,20 @@
 \end{table}
 
 \begin{table}[!h]
+    \caption{Descriptive statistics}
+    \input{../bld/tables/descriptive_stats.tex}
+\end{table}
+
+\begin{table}[!h]
     \caption{Simple statsmodels two-step results}
     \input{../bld/tables/statsmodels_simple_two_step.tex}
 \end{table}
 
 
-
+\begin{table}[!h]
+    \caption{Advanced statsmodels two-step results}
+    \input{../bld/tables/statsmodels_advanced_two_step.tex}
+\end{table}
 
 
 
