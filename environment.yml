@@ -1,12 +1,9 @@
+---
 # Manual steps after creating environment:
 #  - switch to improve_estimation_table branch in estimagic source
 #  - pip install -e ../relative/path/to/estimagic
-
 name: estimagic_tables_examples
-channels:
-  - conda-forge
-  - nodefaults
-
+channels: [conda-forge, nodefaults]
 dependencies:
   - conda-lock
   - ipykernel
@@ -24,6 +21,4 @@ dependencies:
   - setuptools_scm
   - statsmodels
   - toml
-  - pip:
-      - -e .
-      - kaleido
+  - pip: [-e ., kaleido]
