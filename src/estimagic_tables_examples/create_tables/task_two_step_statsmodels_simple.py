@@ -35,8 +35,8 @@ for task_id, kwargs in PARAMETRIZATION.items():
             models,
             return_type="render_inputs",
             custom_param_names={"Intercept": "Constant", "Age": "Age of respondent"},
-            # ToDo: A bit confusing why I need to use custom_col_groups instead of
-            # ToDo: custom_col_names here.
+            # TODO: A bit confusing why I need to use custom_col_groups instead of
+            # TODO: custom_col_names here.
             custom_col_groups={"target": "Output"},
         )
         # Remove rows from footer.

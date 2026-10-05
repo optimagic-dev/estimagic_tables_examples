@@ -13,8 +13,7 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-added-large-files
-        args:
-          - --maxkb=25
+        args: [--maxkb=25]
       - id: check-case-conflict
       - id: check-merge-conflict
       - id: check-vcs-permalinks
@@ -23,16 +22,13 @@ repos:
       - id: debug-statements
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
-        types:
-          - text
+        types: [text]
       - id: forbid-submodules
       - id: mixed-line-ending
-        args:
-          - --fix=lf
+        args: [--fix=lf]
         description: Forces to replace line ending by the UNIX 'lf' character.
       - id: name-tests-test
-        args:
-          - --pytest-test-first
+        args: [--pytest-test-first]
       - id: trailing-whitespace
       - id: check-ast
       - id: check-docstring-first
@@ -78,30 +74,21 @@ repos:
     rev: 1.0.0
     hooks:
       - id: mdformat
-        additional_dependencies:
-          - mdformat-gfm
-          - mdformat-black
-        args:
-          - --wrap
-          - '88'
+        additional_dependencies: [mdformat-gfm, mdformat-black]
+        args: [--wrap, '88']
         files: (README\.md)
   - repo: https://github.com/executablebooks/mdformat
     rev: 1.0.0
     hooks:
       - id: mdformat
-        additional_dependencies:
-          - mdformat-myst
-          - mdformat-black
-        args:
-          - --wrap
-          - '88'
+        additional_dependencies: [mdformat-myst, mdformat-black]
+        args: [--wrap, '88']
         files: (docs/.)
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.3
     hooks:
       - id: codespell
-        args:
-          - --skip="**.ipynb"
+        args: [--skip="**.ipynb"]
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: v3.2.0
     hooks:
