@@ -62,7 +62,7 @@ for task_id, kwargs in PARAMETRIZATION.items():
         )
 
         # formatting
-        # ToDo: Provide (part of) this function in estimagic?
+        # TODO: Provide (part of) this function in estimagic?
         descriptive_stats = apply_custom_number_format(
             descriptive_stats,
             int_cols=["N subj."],
